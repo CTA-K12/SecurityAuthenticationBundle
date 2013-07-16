@@ -1,0 +1,48 @@
+MESD\Security\AuthenticationBundle\Entity\AuthPDO:
+    type: entity
+    table: auth_service_pdo
+    fields:
+        username:
+            type: string
+            length: 255
+            column: username
+        password:
+            type: string
+            length: 255
+            column: password
+        host:
+            type: string
+            length: 255
+            column: host
+        portNumber:
+            type: integer
+            column: port_number
+        driver:
+            type: string
+            length: 255
+            column: driver
+        databaseName:
+            type: string
+            length: 255
+            column: database_name
+        tableName:
+            type: string
+            length: 255
+            column: table_name
+        usernameColumn:
+            type: string
+            length: 255
+            column: username_column
+        passwordColumn:
+            type: string
+            length: 255
+            column: password_column
+        saltColumn:
+            type: string
+            length: 255
+            column: salt_column
+        passwordCrypt:
+            type: string
+            length: 255
+            column: password_crypt
+    lifecycleCallbacks: {  }

@@ -1,0 +1,10 @@
+{
+    "name": "mesd/security-authentication-bundle",
+    "license": "MIT",
+    "type": "symfony-bundle",
+    "description": "Security Authentication bundle",
+    "autoload": {
+        "psr-0": { "MESD\\Security\\AuthenticationBundle": "" }
+    },
+    "target-dir": "MESD/Security/AuthenticationBundle"
+}

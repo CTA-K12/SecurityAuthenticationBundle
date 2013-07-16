@@ -1,0 +1,29 @@
+MESD\Security\AuthenticationBundle\Entity\AuthUserService:
+    type: entity
+    table: auth_user_service
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        username:
+            type: string
+            length: 255
+            column: username
+    manyToOne:
+        authUser:
+            joinColumn:
+                name: auth_user_id
+            targetEntity: AuthUser
+            inversedBy: authUserService
+        authService:
+            joinColumn:
+                name: auth_service_id
+            targetEntity: AuthService
+            inversedBy: authUserService
+    oneToMany:
+        authUserSetting:
+            targetEntity: AuthUserSetting
+            mappedBy: authUserService
+    lifecycleCallbacks: {  }

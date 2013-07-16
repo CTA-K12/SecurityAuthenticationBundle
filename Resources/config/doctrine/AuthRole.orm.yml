@@ -1,0 +1,46 @@
+MESD\Security\AuthenticationBundle\Entity\AuthRole:
+    type: entity
+    table: auth_role
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        name:
+            type: string
+            length: 255
+            column: name
+            nullable: false
+        role:
+            type: string
+            length: 255
+            column: role
+            nullable: false
+    manyToMany:
+        authUser:
+            targetEntity: AuthUser
+            inversedBy: authRole
+            joinTable:
+                name: auth_role__auth_user
+                joinColumns:
+                    auth_role_id:
+                        referencedColumnName: id
+                inverseJoinColumns:
+                    auth_usor_id:
+                        referencedColumnName: id
+        roleElement:
+            targetEntity: AuthRole
+            mappedBy: roleSet
+        roleSet:
+            targetEntity: AuthRole
+            inversedBy: roleElement
+            joinTable:
+                name: role_element__role_set
+                joinColumns:
+                    role_element_id:
+                        referencedColumnName: id
+                inverseJoinColumns:
+                    role_set_id:
+                        referencedColumnName: id
+    lifecycleCallbacks: {  }

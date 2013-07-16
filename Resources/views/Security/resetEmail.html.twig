@@ -1,0 +1,9 @@
+<html>
+    <body>
+        <p>Someone has submitted a request to reset the password on your account.</p>
+        <p>If you did not request a password reset, please ignore this e-mail.</p>
+        <p>If you did, please click <a href="{{ url('verification', {'email': email, 'verification': verification}) }}">here</a> to reset your password. Or copy and paste the following:</p>
+        <p>{{ url('verification', {'email': email, 'verification': verification}) }}</p>
+        <p>This verification code was sent at {{ sent }} and will expire at {{ expire }}</p>
+    </body>
+</html>

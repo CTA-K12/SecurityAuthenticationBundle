@@ -1,0 +1,28 @@
+MESD\Security\AuthenticationBundle\Entity\AuthLDAP:
+    type: entity
+    table: auth_service_ldap
+    fields:
+        username:
+            type: string
+            length: 255
+            column: username
+        password:
+            type: string
+            length: 255
+            column: password
+        host:
+            type: string
+            length: 255
+            column: host
+        portNumber:
+            type: integer
+            column: port_number
+        baseDN:
+            type: string
+            length: 255
+            column: base_dn
+        filter:
+            type: string
+            length: 255
+            column: filter
+    lifecycleCallbacks: {  }

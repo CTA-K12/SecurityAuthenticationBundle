@@ -1,0 +1,18 @@
+{% extends '::splash.html.twig' %}
+{% set subtitle = 'Login'%}
+{% set action = path('login_check') %}
+
+{% block panelbody %}
+    {% if error %}
+    <div class='error'>{{ error.message }}</div>
+    {% endif %}
+    <label for='username' class='control-label'>Email</label>
+    <input type='text' id='username' name='_username' placeholder='Email' value='{{ last_username }}' />
+    <label for='password' class='control-label'>Password</label>
+    <input type='password' id='password' name='_password' placeholder='Password'/>
+{% endblock panelbody %}
+{% block panelfooter %}
+    <a href='{{ path('registration') }}' class='btn btn-link'>Register</a>
+    <a id='reset-button' href='{{ path('reset_password') }}' class='btn btn-link'>Forgot Password?</a>
+    <button type='submit' class='btn btn-primary'>Login</button>
+{% endblock panelfooter %}

@@ -1,0 +1,78 @@
+{% extends '::base.html.twig' %}
+
+{% block body %}
+{% for entities in entitiess %}
+<table border="1">
+    <tr>
+        <th>Description</th>
+        <th>Username</th>
+        <th>Password</th>
+        <th>Host</th>
+        <th>Port</th>
+        <th>Filter</th>
+        <th>Driver</th>
+        <th>Database Name</th>
+        <th>Table Name</th>
+        <th>Username Column</th>
+        <th>Password Column</th>
+    </tr>
+    {% for entity in entities %}
+    <tr>
+        <td>
+            {{ entity.description }}
+        </td>
+        <td>
+        {% if entity.username is defined %}
+            {{ entity.username }}
+        {% endif %}
+        </td>
+        <td>
+        {% if entity.password is defined %}
+            {{ entity.password }}
+        {% endif %}
+        </td>
+        <td>
+        {% if entity.host is defined %}
+            {{ entity.host }}
+        {% endif %}
+        </td>
+        <td>
+        {% if entity.portNumber is defined %}
+            {{ entity.portNumber }}
+        {% endif %}
+        </td>
+        <td>
+        {% if entity.filter is defined %}
+            {{ entity.filter }}
+        {% endif %}
+        </td>
+        <td>
+        {% if entity.driver is defined %}
+            {{ entity.driver }}
+        {% endif %}
+        </td>
+        <td>
+        {% if entity.databaseName is defined %}
+            {{ entity.databaseName }}
+        {% endif %}
+        </td>
+        <td>
+        {% if entity.tableName is defined %}
+            {{ entity.tableName }}
+        {% endif %}
+        </td>
+        <td>
+        {% if entity.usernameColumn is defined %}
+            {{ entity.usernameColumn }}
+        {% endif %}
+        </td>
+        <td>
+        {% if entity.passwordColumn is defined %}
+            {{ entity.passwordColumn }}
+        {% endif %}
+        </td>
+    <tr>
+    {% endfor %}
+</table>
+{% endfor %}
+{% endblock body %}

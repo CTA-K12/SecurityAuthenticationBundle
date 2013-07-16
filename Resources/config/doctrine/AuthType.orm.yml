@@ -1,0 +1,18 @@
+MESD\Security\AuthenticationBundle\Entity\AuthType:
+    type: entity
+    table: auth_type
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        name:
+            type: string
+            length: 255
+            column: name
+    oneToMany:
+        authService:
+            targetEntity: AuthService
+            mappedBy: authType
+    lifecycleCallbacks: {  }

@@ -1,0 +1,34 @@
+login:
+    pattern: /login
+    defaults: { _controller: MESDSecurityAuthenticationBundle:Security:login }
+
+login_check:
+    pattern: /auth
+    requirements: { _method: POST }
+
+logout:
+    pattern: /logout
+
+registration:
+    pattern: /register
+    defaults: { _controller: MESDSecurityAuthenticationBundle:Security:register }
+
+reset_password:
+    pattern: /resetpass
+    defaults: { _controller: MESDSecurityAuthenticationBundle:Security:resetPassword }
+
+does_not_exist:
+    pattern: /doesnotexist
+    defaults: { _controller: MESDSecurityAuthenticationBundle:Security:doesNotExist }
+
+verification:
+    pattern: /verify/{email}/{verification}
+    defaults: { _controller: MESDSecurityAuthenticationBundle:Security:verify }
+
+change_password:
+    pattern: /changepass
+    defaults: { _controller: MESDSecurityAuthenticationBundle:Security:changePassword }
+
+check_email:
+    pattern: /checkemail
+    defaults: { _controller: MESDSecurityAuthenticationBundle:Security:checkEmail }

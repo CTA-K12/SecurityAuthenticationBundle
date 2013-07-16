@@ -1,0 +1,24 @@
+MESD\Security\AuthenticationBundle\Entity\AuthLoginAttempt:
+    type: entity
+    table: auth_login_attempt
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        username:
+            type: string
+            length: 255
+            column: username
+        IPAddress:
+            type: string
+            length: 255
+            column: ip_address
+        loginTime:
+            type: datetime
+            column: login_time
+        successful:
+            type: boolean
+            column: successful
+    lifecycleCallbacks: {  }

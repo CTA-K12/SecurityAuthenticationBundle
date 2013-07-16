@@ -1,0 +1,9 @@
+{% extends '::splash.html.twig' %}
+{% set subtitle = 'Register'%}
+{% set action = path('registration') %}
+{% block panelbody %}
+    {{ form_widget(form) }}
+{% endblock panelbody %}
+{% block panelfooter %}
+    <button type="submit" class="btn btn-large">register</button>
+{% endblock panelfooter %}

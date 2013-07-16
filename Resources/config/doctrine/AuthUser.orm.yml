@@ -1,0 +1,58 @@
+MESD\Security\AuthenticationBundle\Entity\AuthUser:
+    type: entity
+    table: auth_user
+    inheritanceType: SINGLE_TABLE
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        username:
+            type: string
+            length: 255
+            column: username
+            nullable: false
+            unique: true
+        email:
+            type: string
+            length: 255
+            column: email
+            nullable: false
+            unique: true
+        password:
+            type: string
+            length: 255
+            column: password
+            nullable: false
+        salt:
+            type: string
+            length: 255
+            column: salt
+            nullable: false
+        passwordDate:
+            type: datetime
+            column: password_date
+            nullable: true
+        verification:
+            type: string
+            length: 255
+            column: verification
+            nullable: true
+        verifyExpiration:
+            type: datetime
+            column: verify_expiration
+            nullable: true
+    manyToMany:
+        authRole:
+            targetEntity: AuthRole
+            mappedBy: authUser
+    oneToMany:
+        authUserService:
+            targetEntity: AuthUserService
+            mappedBy: authUser
+    oneToOne:
+        authUserSetting:
+            targetEntity: AuthUserSetting
+            mappedBy: authUser
+    lifecycleCallbacks: {  }
