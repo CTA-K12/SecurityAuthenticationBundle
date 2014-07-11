@@ -19,57 +19,57 @@ abstract class AuthUser implements UserInterface, \Serializable
     /**
      * @var string
      */
-    private $email;
+    protected $email;
 
     /**
      * @var string
      */
-    private $password;
+    protected $password;
 
     /**
      * @var string
      */
-    private $salt;
+    protected $salt;
 
     /**
      * @var \DateTime
      */
-    private $passwordDate;
+    protected $passwordDate;
 
     /**
     * @var string $verification
     */
-    private $verification;
+    protected $verification;
 
     /**
     * @var \DateTime $verifyExpiration
     */
-    private $verifyExpiration;
+    protected $verifyExpiration;
 
     /**
     * @var string $rawPassword
     */
-    private $rawPassword;
+    protected $rawPassword;
 
     /**
     * @var \Doctrine\Common\Collections\ArrayCollection
     */
-    private $authRole;
+    protected $authRole;
 
     /**
      * @var \MESD\Security\AuthenticationBundle\Entity\AuthUserService
      */
-    private $chosenService;
+    protected $chosenService;
 
     /**
      * @var \Doctrine\Common\Collections\Collection
      */
-    private $authUserService;
+    protected $authUserService;
 
     /**
      * @var MESD\Security\AuthenticationBundle\Entity\AuthUserSetting
      */
-    private $authUserSetting;
+    protected $authUserSetting;
 
 
     /**
