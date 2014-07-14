@@ -1,4 +1,4 @@
-MESD\Security\AuthenticationBundle\Entity\AuthLDAP:
+Mesd\Security\AuthenticationBundle\Entity\AuthLDAP:
     type: entity
     table: auth_service_ldap
     fields:

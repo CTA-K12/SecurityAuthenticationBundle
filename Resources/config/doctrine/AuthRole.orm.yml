@@ -1,4 +1,4 @@
-MESD\Security\AuthenticationBundle\Entity\AuthRole:
+Mesd\Security\AuthenticationBundle\Entity\AuthRole:
     type: entity
     table: auth_role
     fields:

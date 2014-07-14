@@ -1,6 +1,6 @@
 <?php
 
-namespace MESD\Security\AuthenticationBundle\Entity;
+namespace Mesd\Security\AuthenticationBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
@@ -25,12 +25,12 @@ class AuthUserSetting
         return $this->id;
     }
     /**
-     * @var MESD\Security\AuthenticationBundle\Entity\AuthUser
+     * @var Mesd\Security\AuthenticationBundle\Entity\AuthUser
      */
     private $authUser;
 
     /**
-     * @var MESD\Security\AuthenticationBundle\Entity\AuthUserService
+     * @var Mesd\Security\AuthenticationBundle\Entity\AuthUserService
      */
     private $authUserService;
 
@@ -47,10 +47,10 @@ class AuthUserSetting
     /**
      * Set authUser
      *
-     * @param MESD\Security\AuthenticationBundle\Entity\AuthUser $authUser
+     * @param Mesd\Security\AuthenticationBundle\Entity\AuthUser $authUser
      * @return AuthUserSetting
      */
-    public function setAuthUser(\MESD\Security\AuthenticationBundle\Entity\AuthUser $authUser = null)
+    public function setAuthUser(\Mesd\Security\AuthenticationBundle\Entity\AuthUser $authUser = null)
     {
         $this->authUser = $authUser;
 
@@ -60,7 +60,7 @@ class AuthUserSetting
     /**
      * Get authUser
      *
-     * @return MESD\Security\AuthenticationBundle\Entity\AuthUser
+     * @return Mesd\Security\AuthenticationBundle\Entity\AuthUser
      */
     public function getAuthUser()
     {
@@ -70,10 +70,10 @@ class AuthUserSetting
     /**
      * Set authUserService
      *
-     * @param MESD\Security\AuthenticationBundle\Entity\AuthUserService $authUserService
+     * @param Mesd\Security\AuthenticationBundle\Entity\AuthUserService $authUserService
      * @return AuthUserSetting
      */
-    public function setAuthUserService(\MESD\Security\AuthenticationBundle\Entity\AuthUserService $authUserService = null)
+    public function setAuthUserService(\Mesd\Security\AuthenticationBundle\Entity\AuthUserService $authUserService = null)
     {
         $this->authUserService = $authUserService;
 
@@ -83,7 +83,7 @@ class AuthUserSetting
     /**
      * Get authUserService
      *
-     * @return MESD\Security\AuthenticationBundle\Entity\AuthUserService
+     * @return Mesd\Security\AuthenticationBundle\Entity\AuthUserService
      */
     public function getAuthUserService()
     {

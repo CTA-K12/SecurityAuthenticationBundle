@@ -1,6 +1,6 @@
 <?php
 
-namespace MESD\Security\AuthenticationBundle\Repository;
+namespace Mesd\Security\AuthenticationBundle\Repository;
 
 use Doctrine\ORM\EntityRepository;
 

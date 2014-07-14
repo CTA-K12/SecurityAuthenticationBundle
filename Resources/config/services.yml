@@ -3,5 +3,5 @@
 
 services:
     security.authentication.provider.universal_auth:
-        class:  MESD\Security\AuthenticationBundle\Security\Authentication\UniversalAuthenticationProvider
+        class:  Mesd\Security\AuthenticationBundle\Security\Authentication\UniversalAuthenticationProvider
         arguments: [ @security.user_checker, "", ""]

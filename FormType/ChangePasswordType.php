@@ -1,6 +1,6 @@
 <?php
 
-namespace MESD\Security\AuthenticationBundle\FormType;
+namespace Mesd\Security\AuthenticationBundle\FormType;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -35,7 +35,7 @@ class ChangePasswordType extends AbstractType
     public function setDefaultOptions(OptionsResolverInterface $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'MESD\Security\AuthenticationBundle\Entity\AuthUser'
+            'data_class' => 'Mesd\Security\AuthenticationBundle\Entity\AuthUser'
             ));
     }
 

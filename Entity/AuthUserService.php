@@ -1,6 +1,6 @@
 <?php
 
-namespace MESD\Security\AuthenticationBundle\Entity;
+namespace Mesd\Security\AuthenticationBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
@@ -20,12 +20,12 @@ class AuthUserService
     private $username;
 
     /**
-     * @var \MESD\Security\AuthenticationBundle\Entity\AuthUser
+     * @var \Mesd\Security\AuthenticationBundle\Entity\AuthUser
      */
     private $authUser;
 
     /**
-     * @var \MESD\Security\AuthenticationBundle\Entity\AuthService
+     * @var \Mesd\Security\AuthenticationBundle\Entity\AuthService
      */
     private $authService;
 
@@ -71,10 +71,10 @@ class AuthUserService
     /**
      * Set authUser
      *
-     * @param \MESD\Security\AuthenticationBundle\Entity\AuthUser $authUser
+     * @param \Mesd\Security\AuthenticationBundle\Entity\AuthUser $authUser
      * @return AuthUserService
      */
-    public function setAuthUser(\MESD\Security\AuthenticationBundle\Entity\AuthUser $authUser = null)
+    public function setAuthUser(\Mesd\Security\AuthenticationBundle\Entity\AuthUser $authUser = null)
     {
         $this->authUser = $authUser;
 
@@ -84,7 +84,7 @@ class AuthUserService
     /**
      * Get authUser
      *
-     * @return \MESD\Security\AuthenticationBundle\Entity\AuthUser
+     * @return \Mesd\Security\AuthenticationBundle\Entity\AuthUser
      */
     public function getAuthUser()
     {
@@ -94,10 +94,10 @@ class AuthUserService
     /**
      * Set authService
      *
-     * @param \MESD\Security\AuthenticationBundle\Entity\AuthService $authService
+     * @param \Mesd\Security\AuthenticationBundle\Entity\AuthService $authService
      * @return AuthUserService
      */
-    public function setAuthService(\MESD\Security\AuthenticationBundle\Entity\AuthService $authService = null)
+    public function setAuthService(\Mesd\Security\AuthenticationBundle\Entity\AuthService $authService = null)
     {
         $this->authService = $authService;
 
@@ -107,7 +107,7 @@ class AuthUserService
     /**
      * Get authService
      *
-     * @return \MESD\Security\AuthenticationBundle\Entity\AuthService
+     * @return \Mesd\Security\AuthenticationBundle\Entity\AuthService
      */
     public function getAuthService()
     {
@@ -134,10 +134,10 @@ class AuthUserService
     /**
      * Add authUserSetting
      *
-     * @param MESD\Security\AuthenticationBundle\Entity\AuthUserSetting $authUserSetting
+     * @param Mesd\Security\AuthenticationBundle\Entity\AuthUserSetting $authUserSetting
      * @return AuthUserService
      */
-    public function addAuthUserSetting(\MESD\Security\AuthenticationBundle\Entity\AuthUserSetting $authUserSetting)
+    public function addAuthUserSetting(\Mesd\Security\AuthenticationBundle\Entity\AuthUserSetting $authUserSetting)
     {
         $this->authUserSetting[] = $authUserSetting;
 
@@ -147,9 +147,9 @@ class AuthUserService
     /**
      * Remove authUserSetting
      *
-     * @param MESD\Security\AuthenticationBundle\Entity\AuthUserSetting $authUserSetting
+     * @param Mesd\Security\AuthenticationBundle\Entity\AuthUserSetting $authUserSetting
      */
-    public function removeAuthUserSetting(\MESD\Security\AuthenticationBundle\Entity\AuthUserSetting $authUserSetting)
+    public function removeAuthUserSetting(\Mesd\Security\AuthenticationBundle\Entity\AuthUserSetting $authUserSetting)
     {
         $this->authUserSetting->removeElement($authUserSetting);
     }

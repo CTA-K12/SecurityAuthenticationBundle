@@ -1,8 +1,8 @@
 <?php
 
-namespace MESD\Security\AuthenticationBundle\Security\Authentication;
+namespace Mesd\Security\AuthenticationBundle\Security\Authentication;
 
-use MESD\Security\AuthenticationBundle\Security\Service\LDAPAuthenticationService;
+use Mesd\Security\AuthenticationBundle\Security\Service\LDAPAuthenticationService;
 use Symfony\Component\Security\Core\Authentication\Provider\UserAuthenticationProvider;
 use Symfony\Component\Security\Core\Authentication\Token\UsernamePasswordToken;
 use Symfony\Component\Security\Core\User\UserProviderInterface;
@@ -67,7 +67,7 @@ class UniversalAuthenticationProvider extends UserAuthenticationProvider
             throw new BadCredentialsException('The password cannot be empty.');
         }
 
-        $authServiceClass = 'MESD\Security\AuthenticationBundle\Security\Service\\' .
+        $authServiceClass = 'Mesd\Security\AuthenticationBundle\Security\Service\\' .
                             $user
                             ->getAuthUserSetting()
                             ->getAuthUserService()

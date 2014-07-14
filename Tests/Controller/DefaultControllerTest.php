@@ -1,6 +1,6 @@
 <?php
 
-namespace MESD\Security\AuthenticationBundle\Tests\Controller;
+namespace Mesd\Security\AuthenticationBundle\Tests\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 

@@ -1,9 +1,9 @@
 <?php
-namespace MESD\Security\AuthenticationBundle\DataFixtures\ORM;
+namespace Mesd\Security\AuthenticationBundle\DataFixtures\ORM;
 
 use Doctrine\Common\Persistence\ObjectManager;
 use MESD\DoctrineExtensions\DependentFixtureBundle\DataFixtures\AbstractDependentFixture;
-use MESD\Security\AuthenticationBundle\Entity\AuthLDAP;
+use Mesd\Security\AuthenticationBundle\Entity\AuthLDAP;
 use Symfony\Component\DependencyInjection\ContainerAwareInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 

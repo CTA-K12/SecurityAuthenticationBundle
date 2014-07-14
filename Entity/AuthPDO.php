@@ -1,6 +1,6 @@
 <?php
 
-namespace MESD\Security\AuthenticationBundle\Entity;
+namespace Mesd\Security\AuthenticationBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 

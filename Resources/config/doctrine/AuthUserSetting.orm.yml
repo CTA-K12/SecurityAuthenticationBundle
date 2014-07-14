@@ -1,4 +1,4 @@
-MESD\Security\AuthenticationBundle\Entity\AuthUserSetting:
+Mesd\Security\AuthenticationBundle\Entity\AuthUserSetting:
     type: entity
     table: auth_user_setting
     fields:

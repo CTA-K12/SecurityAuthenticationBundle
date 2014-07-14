@@ -1,6 +1,6 @@
 <?php
 
-namespace MESD\Security\AuthenticationBundle\Controller;
+namespace Mesd\Security\AuthenticationBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 

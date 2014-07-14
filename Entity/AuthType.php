@@ -1,6 +1,6 @@
 <?php
 
-namespace MESD\Security\AuthenticationBundle\Entity;
+namespace Mesd\Security\AuthenticationBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
@@ -68,10 +68,10 @@ class AuthType
     /**
      * Add authService
      *
-     * @param \MESD\Security\AuthenticationBundle\Entity\AuthService $authService
+     * @param \Mesd\Security\AuthenticationBundle\Entity\AuthService $authService
      * @return AuthType
      */
-    public function addAuthService(\MESD\Security\AuthenticationBundle\Entity\AuthService $authService)
+    public function addAuthService(\Mesd\Security\AuthenticationBundle\Entity\AuthService $authService)
     {
         $this->authService[] = $authService;
     
@@ -81,9 +81,9 @@ class AuthType
     /**
      * Remove authService
      *
-     * @param \MESD\Security\AuthenticationBundle\Entity\AuthService $authService
+     * @param \Mesd\Security\AuthenticationBundle\Entity\AuthService $authService
      */
-    public function removeAuthService(\MESD\Security\AuthenticationBundle\Entity\AuthService $authService)
+    public function removeAuthService(\Mesd\Security\AuthenticationBundle\Entity\AuthService $authService)
     {
         $this->authService->removeElement($authService);
     }

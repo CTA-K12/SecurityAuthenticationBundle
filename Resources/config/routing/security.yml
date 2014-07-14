@@ -1,6 +1,6 @@
 login:
     pattern: /login
-    defaults: { _controller: MESDSecurityAuthenticationBundle:Security:login }
+    defaults: { _controller: MesdSecurityAuthenticationBundle:Security:login }
 
 login_check:
     pattern: /auth
@@ -11,24 +11,24 @@ logout:
 
 registration:
     pattern: /register
-    defaults: { _controller: MESDSecurityAuthenticationBundle:Security:register }
+    defaults: { _controller: MesdSecurityAuthenticationBundle:Security:register }
 
 reset_password:
     pattern: /resetpass
-    defaults: { _controller: MESDSecurityAuthenticationBundle:Security:resetPassword }
+    defaults: { _controller: MesdSecurityAuthenticationBundle:Security:resetPassword }
 
 does_not_exist:
     pattern: /doesnotexist
-    defaults: { _controller: MESDSecurityAuthenticationBundle:Security:doesNotExist }
+    defaults: { _controller: MesdSecurityAuthenticationBundle:Security:doesNotExist }
 
 verification:
     pattern: /verify/{email}/{verification}
-    defaults: { _controller: MESDSecurityAuthenticationBundle:Security:verify }
+    defaults: { _controller: MesdSecurityAuthenticationBundle:Security:verify }
 
 change_password:
     pattern: /changepass
-    defaults: { _controller: MESDSecurityAuthenticationBundle:Security:changePassword }
+    defaults: { _controller: MesdSecurityAuthenticationBundle:Security:changePassword }
 
 check_email:
     pattern: /checkemail
-    defaults: { _controller: MESDSecurityAuthenticationBundle:Security:checkEmail }
+    defaults: { _controller: MesdSecurityAuthenticationBundle:Security:checkEmail }

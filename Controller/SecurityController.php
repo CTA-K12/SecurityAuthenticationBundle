@@ -1,14 +1,14 @@
 <?php
 
-namespace MESD\Security\AuthenticationBundle\Controller;
+namespace Mesd\Security\AuthenticationBundle\Controller;
 
-use MESD\Security\AuthenticationBundle\Entity\AuthLoginAttempt;
-use MESD\Security\AuthenticationBundle\Entity\AuthUser;
-use MESD\Security\AuthenticationBundle\Entity\AuthUserService;
-use MESD\Security\AuthenticationBundle\Entity\AuthUserSetting;
-use MESD\Security\AuthenticationBundle\FormType\ChangePasswordType;
-use MESD\Security\AuthenticationBundle\FormType\RegisterType;
-use MESD\Security\AuthenticationBundle\FormType\ResetPasswordType;
+use Mesd\Security\AuthenticationBundle\Entity\AuthLoginAttempt;
+use Mesd\Security\AuthenticationBundle\Entity\AuthUser;
+use Mesd\Security\AuthenticationBundle\Entity\AuthUserService;
+use Mesd\Security\AuthenticationBundle\Entity\AuthUserSetting;
+use Mesd\Security\AuthenticationBundle\FormType\ChangePasswordType;
+use Mesd\Security\AuthenticationBundle\FormType\RegisterType;
+use Mesd\Security\AuthenticationBundle\FormType\ResetPasswordType;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;

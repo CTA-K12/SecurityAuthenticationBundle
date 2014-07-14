@@ -4,7 +4,7 @@
     "type": "symfony-bundle",
     "description": "Security Authentication bundle",
     "autoload": {
-        "psr-0": { "MESD\\Security\\AuthenticationBundle": "" }
+        "psr-0": { "Mesd\\Security\\AuthenticationBundle": "" }
     },
-    "target-dir": "MESD/Security/AuthenticationBundle"
+    "target-dir": "Mesd/Security/AuthenticationBundle"
 }

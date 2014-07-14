@@ -1,6 +1,6 @@
 <?php
 
-namespace MESD\Security\AuthenticationBundle\Entity;
+namespace Mesd\Security\AuthenticationBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
@@ -25,7 +25,7 @@ class AuthService
     private $authUserService;
 
     /**
-     * @var \MESD\Security\AuthenticationBundle\Entity\AuthType
+     * @var \Mesd\Security\AuthenticationBundle\Entity\AuthType
      */
     private $authType;
 
@@ -73,10 +73,10 @@ class AuthService
     /**
      * Add authUserService
      *
-     * @param \MESD\Security\AuthenticationBundle\Entity\AuthUserService $authUserService
+     * @param \Mesd\Security\AuthenticationBundle\Entity\AuthUserService $authUserService
      * @return AuthService
      */
-    public function addAuthUserService(\MESD\Security\AuthenticationBundle\Entity\AuthUserService $authUserService)
+    public function addAuthUserService(\Mesd\Security\AuthenticationBundle\Entity\AuthUserService $authUserService)
     {
         $this->authUserService[] = $authUserService;
     
@@ -86,9 +86,9 @@ class AuthService
     /**
      * Remove authUserService
      *
-     * @param \MESD\Security\AuthenticationBundle\Entity\AuthUserService $authUserService
+     * @param \Mesd\Security\AuthenticationBundle\Entity\AuthUserService $authUserService
      */
-    public function removeAuthUserService(\MESD\Security\AuthenticationBundle\Entity\AuthUserService $authUserService)
+    public function removeAuthUserService(\Mesd\Security\AuthenticationBundle\Entity\AuthUserService $authUserService)
     {
         $this->authUserService->removeElement($authUserService);
     }
@@ -106,10 +106,10 @@ class AuthService
     /**
      * Set authType
      *
-     * @param \MESD\Security\AuthenticationBundle\Entity\AuthType $authType
+     * @param \Mesd\Security\AuthenticationBundle\Entity\AuthType $authType
      * @return AuthService
      */
-    public function setAuthType(\MESD\Security\AuthenticationBundle\Entity\AuthType $authType = null)
+    public function setAuthType(\Mesd\Security\AuthenticationBundle\Entity\AuthType $authType = null)
     {
         $this->authType = $authType;
     
@@ -119,7 +119,7 @@ class AuthService
     /**
      * Get authType
      *
-     * @return \MESD\Security\AuthenticationBundle\Entity\AuthType 
+     * @return \Mesd\Security\AuthenticationBundle\Entity\AuthType 
      */
     public function getAuthType()
     {

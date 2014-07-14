@@ -1,13 +1,13 @@
 <?php
 
-namespace MESD\Security\AuthenticationBundle;
+namespace Mesd\Security\AuthenticationBundle;
 
-use MESD\Security\AuthenticationBundle\Security\Factory\UniversalAuthenticationFactory;
+use Mesd\Security\AuthenticationBundle\Security\Factory\UniversalAuthenticationFactory;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
 
-class MESDSecurityAuthenticationBundle extends Bundle
+class MesdSecurityAuthenticationBundle extends Bundle
 {
     public function build(ContainerBuilder $container)
     {

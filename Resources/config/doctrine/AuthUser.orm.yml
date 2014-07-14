@@ -1,4 +1,4 @@
-MESD\Security\AuthenticationBundle\Entity\AuthUser:
+Mesd\Security\AuthenticationBundle\Entity\AuthUser:
     type: entity
     table: auth_user
     inheritanceType: SINGLE_TABLE

@@ -1,4 +1,4 @@
-MESD\Security\AuthenticationBundle\Entity\AuthPDO:
+Mesd\Security\AuthenticationBundle\Entity\AuthPDO:
     type: entity
     table: auth_service_pdo
     fields:

@@ -1,7 +1,7 @@
 mesd_security_security_homepage:
     pattern:  /services
-    defaults: { _controller: MESDSecurityAuthenticationBundle:Default:index }
+    defaults: { _controller: MesdSecurityAuthenticationBundle:Default:index }
 
-MESDORMedORMedBundle_consent:
-    resource: "@MESDSecurityAuthenticationBundle/Resources/config/routing/security.yml"
+mesd_security_security_security:
+    resource: "@MesdSecurityAuthenticationBundle/Resources/config/routing/security.yml"
     prefix:   /

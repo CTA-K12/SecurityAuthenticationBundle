@@ -1,6 +1,6 @@
 <?php
 
-namespace MESD\Security\AuthenticationBundle\Entity;
+namespace Mesd\Security\AuthenticationBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\Role\RoleInterface;
@@ -109,10 +109,10 @@ class AuthRole implements RoleInterface, \Serializable
     /**
      * Add authUser
      *
-     * @param \MESD\Security\AuthenticationBundle\Entity\AuthUser $authUser
+     * @param \Mesd\Security\AuthenticationBundle\Entity\AuthUser $authUser
      * @return AuthRole
      */
-    public function addAuthUser(\MESD\Security\AuthenticationBundle\Entity\AuthUser $authUser)
+    public function addAuthUser(\Mesd\Security\AuthenticationBundle\Entity\AuthUser $authUser)
     {
         $this->authUser[] = $authUser;
 
@@ -122,9 +122,9 @@ class AuthRole implements RoleInterface, \Serializable
     /**
      * Remove authUser
      *
-     * @param \MESD\Security\AuthenticationBundle\Entity\AuthUser $authUser
+     * @param \Mesd\Security\AuthenticationBundle\Entity\AuthUser $authUser
      */
-    public function removeAuthUser(\MESD\Security\AuthenticationBundle\Entity\AuthUser $authUser)
+    public function removeAuthUser(\Mesd\Security\AuthenticationBundle\Entity\AuthUser $authUser)
     {
         $this->authUser->removeElement($authUser);
     }
@@ -167,10 +167,10 @@ class AuthRole implements RoleInterface, \Serializable
     /**
      * Add roleElement
      *
-     * @param \MESD\Security\AuthenticationBundle\Entity\AuthRole $roleElement
+     * @param \Mesd\Security\AuthenticationBundle\Entity\AuthRole $roleElement
      * @return AuthRole
      */
-    public function addRoleElement(\MESD\Security\AuthenticationBundle\Entity\AuthRole $roleElement)
+    public function addRoleElement(\Mesd\Security\AuthenticationBundle\Entity\AuthRole $roleElement)
     {
         $this->roleElement[] = $roleElement;
         $roleElement->addRoleSet($this);
@@ -181,9 +181,9 @@ class AuthRole implements RoleInterface, \Serializable
     /**
      * Remove roleElement
      *
-     * @param \MESD\Security\AuthenticationBundle\Entity\AuthRole $roleElement
+     * @param \Mesd\Security\AuthenticationBundle\Entity\AuthRole $roleElement
      */
-    public function removeRoleElement(\MESD\Security\AuthenticationBundle\Entity\AuthRole $roleElement)
+    public function removeRoleElement(\Mesd\Security\AuthenticationBundle\Entity\AuthRole $roleElement)
     {
         $this->roleElement->removeElement($roleElement);
         $roleElement->removeRoleSet($this);
@@ -202,10 +202,10 @@ class AuthRole implements RoleInterface, \Serializable
     /**
      * Add roleSet
      *
-     * @param \MESD\Security\AuthenticationBundle\Entity\AuthRole $roleSet
+     * @param \Mesd\Security\AuthenticationBundle\Entity\AuthRole $roleSet
      * @return AuthRole
      */
-    public function addRoleSet(\MESD\Security\AuthenticationBundle\Entity\AuthRole $roleSet)
+    public function addRoleSet(\Mesd\Security\AuthenticationBundle\Entity\AuthRole $roleSet)
     {
         $this->roleSet[] = $roleSet;
 
@@ -215,9 +215,9 @@ class AuthRole implements RoleInterface, \Serializable
     /**
      * Remove roleSet
      *
-     * @param \MESD\Security\AuthenticationBundle\Entity\AuthRole $roleSet
+     * @param \Mesd\Security\AuthenticationBundle\Entity\AuthRole $roleSet
      */
-    public function removeRoleSet(\MESD\Security\AuthenticationBundle\Entity\AuthRole $roleSet)
+    public function removeRoleSet(\Mesd\Security\AuthenticationBundle\Entity\AuthRole $roleSet)
     {
         $this->roleSet->removeElement($roleSet);
     }

@@ -1,6 +1,6 @@
 <?php
 
-namespace MESD\Security\AuthenticationBundle\Entity;
+namespace Mesd\Security\AuthenticationBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\Encoder\PasswordEncoderInterface;
@@ -57,7 +57,7 @@ abstract class AuthUser implements UserInterface, \Serializable
     protected $authRole;
 
     /**
-     * @var \MESD\Security\AuthenticationBundle\Entity\AuthUserService
+     * @var \Mesd\Security\AuthenticationBundle\Entity\AuthUserService
      */
     protected $chosenService;
 
@@ -67,7 +67,7 @@ abstract class AuthUser implements UserInterface, \Serializable
     protected $authUserService;
 
     /**
-     * @var MESD\Security\AuthenticationBundle\Entity\AuthUserSetting
+     * @var Mesd\Security\AuthenticationBundle\Entity\AuthUserSetting
      */
     protected $authUserSetting;
 
@@ -116,10 +116,10 @@ abstract class AuthUser implements UserInterface, \Serializable
     /**
     * Add authRole
     *
-    * @param \MESD\Security\AuthenticationBundle\Entity\AuthRole $authRole
+    * @param \Mesd\Security\AuthenticationBundle\Entity\AuthRole $authRole
     * @return AuthUser
     */
-    public function addAuthRole(\MESD\Security\AuthenticationBundle\Entity\AuthRole $authRole)
+    public function addAuthRole(\Mesd\Security\AuthenticationBundle\Entity\AuthRole $authRole)
     {
         $this->authRole[] = $authRole;
         $authRole->addAuthUser($this);
@@ -130,9 +130,9 @@ abstract class AuthUser implements UserInterface, \Serializable
     /**
     * Remove authRole
     *
-    * @param \MESD\Security\AuthenticationBundle\Entity\AuthRole $authRole
+    * @param \Mesd\Security\AuthenticationBundle\Entity\AuthRole $authRole
     */
-    public function removeAuthRole(\MESD\Security\AuthenticationBundle\Entity\AuthRole $authRole)
+    public function removeAuthRole(\Mesd\Security\AuthenticationBundle\Entity\AuthRole $authRole)
     {
         $this->authRole->removeElement($authRole);
         $authRole->removeAuthUser($this);
@@ -330,10 +330,10 @@ abstract class AuthUser implements UserInterface, \Serializable
     /**
      * Set chosenService
      *
-     * @param \MESD\Security\AuthenticationBundle\Entity\AuthUserService $chosenService
+     * @param \Mesd\Security\AuthenticationBundle\Entity\AuthUserService $chosenService
      * @return AuthUser
      */
-    public function setChosenService(\MESD\Security\AuthenticationBundle\Entity\AuthUserService $chosenService = null)
+    public function setChosenService(\Mesd\Security\AuthenticationBundle\Entity\AuthUserService $chosenService = null)
     {
         $this->chosenService = $chosenService;
 
@@ -343,7 +343,7 @@ abstract class AuthUser implements UserInterface, \Serializable
     /**
      * Get chosenService
      *
-     * @return \MESD\Security\AuthenticationBundle\Entity\AuthUserService
+     * @return \Mesd\Security\AuthenticationBundle\Entity\AuthUserService
      */
     public function getChosenService()
     {
@@ -353,10 +353,10 @@ abstract class AuthUser implements UserInterface, \Serializable
     /**
      * Add authUserService
      *
-     * @param \MESD\Security\AuthenticationBundle\Entity\AuthUserService $authUserService
+     * @param \Mesd\Security\AuthenticationBundle\Entity\AuthUserService $authUserService
      * @return AuthUser
      */
-    public function addAuthUserService(\MESD\Security\AuthenticationBundle\Entity\AuthUserService $authUserService)
+    public function addAuthUserService(\Mesd\Security\AuthenticationBundle\Entity\AuthUserService $authUserService)
     {
         $this->authUserService[] = $authUserService;
 
@@ -366,9 +366,9 @@ abstract class AuthUser implements UserInterface, \Serializable
     /**
      * Remove authUserService
      *
-     * @param \MESD\Security\AuthenticationBundle\Entity\AuthUserService $authUserService
+     * @param \Mesd\Security\AuthenticationBundle\Entity\AuthUserService $authUserService
      */
-    public function removeAuthUserService(\MESD\Security\AuthenticationBundle\Entity\AuthUserService $authUserService)
+    public function removeAuthUserService(\Mesd\Security\AuthenticationBundle\Entity\AuthUserService $authUserService)
     {
         $this->authUserService->removeElement($authUserService);
     }
@@ -386,10 +386,10 @@ abstract class AuthUser implements UserInterface, \Serializable
     /**
      * Add authUserSetting
      *
-     * @param MESD\Security\AuthenticationBundle\Entity\AuthUserSetting $authUserSetting
+     * @param Mesd\Security\AuthenticationBundle\Entity\AuthUserSetting $authUserSetting
      * @return AuthUser
      */
-    public function addAuthUserSetting(\MESD\Security\AuthenticationBundle\Entity\AuthUserSetting $authUserSetting)
+    public function addAuthUserSetting(\Mesd\Security\AuthenticationBundle\Entity\AuthUserSetting $authUserSetting)
     {
         $this->authUserSetting[] = $authUserSetting;
 
@@ -399,10 +399,10 @@ abstract class AuthUser implements UserInterface, \Serializable
     /**
      * Set authUserSetting
      *
-     * @param MESD\Security\AuthenticationBundle\Entity\AuthUserSetting $authUserSetting
+     * @param Mesd\Security\AuthenticationBundle\Entity\AuthUserSetting $authUserSetting
      * @return AuthUser
      */
-    public function setAuthUserSetting(\MESD\Security\AuthenticationBundle\Entity\AuthUserSetting $authUserSetting = null)
+    public function setAuthUserSetting(\Mesd\Security\AuthenticationBundle\Entity\AuthUserSetting $authUserSetting = null)
     {
         $this->authUserSetting = $authUserSetting;
 
@@ -412,7 +412,7 @@ abstract class AuthUser implements UserInterface, \Serializable
     /**
      * Get authUserSetting
      *
-     * @return MESD\Security\AuthenticationBundle\Entity\AuthUserSetting
+     * @return Mesd\Security\AuthenticationBundle\Entity\AuthUserSetting
      */
     public function getAuthUserSetting()
     {

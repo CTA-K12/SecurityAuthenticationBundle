@@ -1,6 +1,6 @@
 <?php
 
-namespace MESD\Security\AuthenticationBundle\Security\Service;
+namespace Mesd\Security\AuthenticationBundle\Security\Service;
 
 /**
  * UniversalAuthenticationServiceInterface is the interface for

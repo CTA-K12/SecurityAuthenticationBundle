@@ -1,4 +1,4 @@
-MESD\Security\AuthenticationBundle\Entity\AuthService:
+Mesd\Security\AuthenticationBundle\Entity\AuthService:
     type: entity
     table: auth_service
     inheritanceType: JOINED

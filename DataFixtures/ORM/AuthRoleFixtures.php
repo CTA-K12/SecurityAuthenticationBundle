@@ -1,9 +1,9 @@
 <?php
-namespace MESD\Security\AuthenticationBundle\DataFixtures\ORM;
+namespace Mesd\Security\AuthenticationBundle\DataFixtures\ORM;
 
 use Doctrine\Common\Persistence\ObjectManager;
 use MESD\DoctrineExtensions\DependentFixtureBundle\DataFixtures\AbstractDependentFixture;
-use MESD\Security\AuthenticationBundle\Entity\AuthRole;
+use Mesd\Security\AuthenticationBundle\Entity\AuthRole;
 
 class AuthRoleFixtures extends AbstractDependentFixture
 {
