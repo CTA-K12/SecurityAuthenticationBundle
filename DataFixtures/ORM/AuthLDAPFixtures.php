@@ -2,16 +2,16 @@
 namespace Mesd\Security\AuthenticationBundle\DataFixtures\ORM;
 
 use Doctrine\Common\Persistence\ObjectManager;
-use MESD\DoctrineExtensions\DependentFixtureBundle\DataFixtures\AbstractDependentFixture;
+use Mesd\DoctrineExtensions\DependentFixtureBundle\DataFixtures\AbstractDependentFixture;
 use Mesd\Security\AuthenticationBundle\Entity\AuthLDAP;
 use Symfony\Component\DependencyInjection\ContainerAwareInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 class AuthLDAPFixtures extends AbstractDependentFixture implements ContainerAwareInterface
 {
-    static public $count;
+    public static $count;
 
-    static public function getDependentOrder()
+    public static function getDependentOrder()
     {
         return max(array(
             AuthServiceFixtures::getDependentOrder(),
@@ -31,8 +31,8 @@ class AuthLDAPFixtures extends AbstractDependentFixture implements ContainerAwar
         $referenceName = 'auth_ldap_';
         $authServices = $this->container->getParameter('auth_service');
 
-        foreach($authServices as $authTypeName => $authType) {
-            foreach($authType as $authServiceAlias => $authService) {
+        foreach ($authServices as $authTypeName => $authType) {
+            foreach ($authType as $authServiceAlias => $authService) {
                 if ('LDAP' == $authTypeName) {
                     $object = new AuthLDAP();
                     $this->addReference($referenceName . strtolower($authServiceAlias), $object);

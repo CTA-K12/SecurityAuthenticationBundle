@@ -2,16 +2,16 @@
 namespace Mesd\Security\AuthenticationBundle\DataFixtures\ORM;
 
 use Doctrine\Common\Persistence\ObjectManager;
-use MESD\DoctrineExtensions\DependentFixtureBundle\DataFixtures\AbstractDependentFixture;
+use Mesd\DoctrineExtensions\DependentFixtureBundle\DataFixtures\AbstractDependentFixture;
 use Mesd\Security\AuthenticationBundle\Entity\AuthPDO;
 use Symfony\Component\DependencyInjection\ContainerAwareInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 class AuthPDOFixtures extends AbstractDependentFixture implements ContainerAwareInterface
 {
-    static public $count;
+    public static $count;
 
-    static public function getDependentOrder()
+    public static function getDependentOrder()
     {
         return max(array(
             AuthServiceFixtures::getDependentOrder(),
@@ -31,8 +31,8 @@ class AuthPDOFixtures extends AbstractDependentFixture implements ContainerAware
         $referenceName = 'auth_pdo_';
         $authServices = $this->container->getParameter('auth_service');
 
-        foreach($authServices as $authTypeName => $authType) {
-            foreach($authType as $authServiceAlias => $authService) {
+        foreach ($authServices as $authTypeName => $authType) {
+            foreach ($authType as $authServiceAlias => $authService) {
                 if ('PDO' == $authTypeName) {
                     $object = new AuthPDO();
                     $this->addReference($referenceName . strtolower($authServiceAlias), $object);
