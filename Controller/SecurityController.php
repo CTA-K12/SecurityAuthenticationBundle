@@ -41,7 +41,7 @@ class SecurityController extends Controller
             $error = $this->get('request')->getSession()->get(SecurityContext::AUTHENTICATION_ERROR);
         }
 
-        return $this->render('MESDSecurityAuthenticationBundle:Security:login.html.twig'
+        return $this->render('MesdSecurityAuthenticationBundle:Security:login.html.twig'
             ,array(
                 'last_username' => $lastUsername,
                 'error' => $error
@@ -69,14 +69,14 @@ class SecurityController extends Controller
                 $authUser->setUsername($authUser->getEmail());
 
                 $em = $this->getDoctrine()->getManager();
-                $authRole = $em->getRepository('MESDSecurityAuthenticationBundle:AuthRole')->findOneByRole('ROLE_USER');
+                $authRole = $em->getRepository('MesdSecurityAuthenticationBundle:AuthRole')->findOneByRole('ROLE_USER');
                 $authUser->addAuthRole($authRole);
                 $em->persist($authUser);
 
                 $authUserService = new AuthUserService();
                 $authUserService->setUsername('');
                 $authUserService->setAuthUser($authUser);
-                $authService = $em->getRepository('MESDSecurityAuthenticationBundle:AuthService')->findOneByDescription('Band Camp');
+                $authService = $em->getRepository('MesdSecurityAuthenticationBundle:AuthService')->findOneByDescription('Band Camp');
                 $authUserService->setAuthService($authService);
                 $em->persist($authUserService);
 
@@ -115,7 +115,7 @@ class SecurityController extends Controller
             $verifyExpiration->add(new \DateInterval('PT30M'));
 
             $em = $this->getDoctrine()->getManager();
-            $authUser = $em->getRepository('MESDSecurityAuthenticationBundle:AuthUser')->findOneByEmail($email);
+            $authUser = $em->getRepository('MesdSecurityAuthenticationBundle:AuthUser')->findOneByEmail($email);
 
             if (null != $authUser) {
                 $authUser->setVerification($verification);
@@ -123,7 +123,7 @@ class SecurityController extends Controller
                 $em->persist($authUser);
                 $em->flush();
 
-                $body = $this->renderView('MESDSecurityAuthenticationBundle:Security:resetEmail.html.twig', array(
+                $body = $this->renderView('MesdSecurityAuthenticationBundle:Security:resetEmail.html.twig', array(
                     'verification' => $verification,
                     'email' => $authUser->getEmail(),
                     'sent' => $emailTime->format('g:ia'),
@@ -160,7 +160,7 @@ class SecurityController extends Controller
     public function verifyAction(Request $request, $email, $verification)
     {
         $em = $this->getDoctrine()->getManager();
-        $authUser = $em->getRepository('MESDSecurityAuthenticationBundle:AuthUser')->findOneByEmail($email);
+        $authUser = $em->getRepository('MesdSecurityAuthenticationBundle:AuthUser')->findOneByEmail($email);
         if (($authUser->getVerification() === $verification) && ($authUser->getVerifyExpiration() > new \DateTime()))
         {
             $authUser->setVerifyExpiration(new \DateTime());
