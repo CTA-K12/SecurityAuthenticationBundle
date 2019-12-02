@@ -1,18 +1,22 @@
 {% extends '::splash.html.twig' %}
 {% set subtitle = 'Login'%}
-{% set action = path('login_check') %}
 
-{% block panelBody %}
-    {% if error %}
-    <div class='error'>{{ error.message }}</div>
-    {% endif %}
-    <label for='username' class='control-label'>Email</label>
-    <input type='text' id='username' name='_username' placeholder='Email' value='{{ last_username }}' />
-    <label for='password' class='control-label'>Password</label>
-    <input type='password' id='password' name='_password' placeholder='Password'/>
-{% endblock panelBody %}
-{% block panelFooter %}
-    <a href='{{ path('registration') }}' class='btn btn-link'>Register</a>
-    <a id='reset-button' href='{{ path('reset_password') }}' class='btn btn-link'>Forgot Password?</a>
-    <button type='submit' class='btn btn-primary'>Login</button>
-{% endblock panelFooter %}
+{% block navbarContentLeft %}
+{% endblock navbarContentLeft %}
+{% block navbarContentRight %}
+{% endblock navbarContentRight %}
+
+{% block sectionBody %}
+    <form action="{{ path('login_check') }}" method="POST" class="no-margin">
+        {% if error %}<div class='error'>{{ error.message }}</div>{% endif %}
+        <label for='username' class='control-label'>Email</label>
+        <input type='text' id='username' name='_username' class="form-control" placeholder='Email' value='{{ last_username }}' />
+        <label for='password' class='control-label'>Password</label>
+        <input type='password' id='password' name='_password' class="form-control" placeholder='Password'/>
+{% endblock sectionBody %}
+{% block sectionFooter %}
+        <a href='{{ path('registration') }}' class='btn btn-link'>Register</a>
+        <a id='reset-button' href='{{ path('reset_password') }}' class='btn btn-link'>Forgot Password?</a>
+        <button type='submit' class='btn btn-primary'>Login</button>
+    </form>
+{% endblock sectionFooter %}
