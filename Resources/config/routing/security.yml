@@ -1,34 +1,34 @@
 login:
-    pattern: /login
+    path:     /login
     defaults: { _controller: MesdSecurityAuthenticationBundle:Security:login }
 
 login_check:
-    pattern: /auth
+    path:     /auth
     requirements: { _method: POST }
 
 logout:
-    pattern: /logout
+    path:     /logout
 
 registration:
-    pattern: /register
+    path:     /register
     defaults: { _controller: MesdSecurityAuthenticationBundle:Security:register }
 
 reset_password:
-    pattern: /resetpass
+    path:     /resetpass
     defaults: { _controller: MesdSecurityAuthenticationBundle:Security:resetPassword }
 
 does_not_exist:
-    pattern: /doesnotexist
+    path:     /doesnotexist
     defaults: { _controller: MesdSecurityAuthenticationBundle:Security:doesNotExist }
 
 verification:
-    pattern: /verify/{email}/{verification}
+    path:     /verify/{email}/{verification}
     defaults: { _controller: MesdSecurityAuthenticationBundle:Security:verify }
 
 change_password:
-    pattern: /changepass
+    path:     /changepass
     defaults: { _controller: MesdSecurityAuthenticationBundle:Security:changePassword }
 
 check_email:
-    pattern: /checkemail
+    path:     /checkemail
     defaults: { _controller: MesdSecurityAuthenticationBundle:Security:checkEmail }

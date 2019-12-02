@@ -13,40 +13,40 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Security\Core\Authentication\Token\UsernamePasswordToken;
-use Symfony\Component\Security\Core\SecurityContext;
+use Symfony\Component\Security\Core\Security;
 
 class SecurityController extends Controller
 {
-    public function loginAction()
+    public function loginAction(Request $request)
     {
-        $securityContext = $this->get('security.context');
-        $lastUsername = $this->get('request')->getSession()->get(SecurityContext::LAST_USERNAME);
-        if ($securityContext->isGranted('ROLE_USER')) {
+        $authCheck    = $this->get('security.authorization_checker');
+        $lastUsername = $request->getSession()->get(Security::LAST_USERNAME);
+
+        if ($authCheck->isGranted('ROLE_USER')) {
             return $this->redirect($this->generateUrl($this->container->getParameter('login_alias')));
         }
+
         if (!(is_null($lastUsername))) {
             $em = $this->getDoctrine()->getManager();
             $loginAttempt = new AuthLoginAttempt();
             $loginAttempt->setUsername($lastUsername);
-            $loginAttempt->setIPAddress($this->container->get('request')->server->get('REMOTE_ADDR'));
+            $loginAttempt->setIPAddress($request->server->get('REMOTE_ADDR'));
             $loginAttempt->setLoginTime(new \DateTime());
             $loginAttempt->setSuccessful(false);
             $em->persist($loginAttempt);
             $em->flush();
         }
 
-        if ($this->get('request')->attributes->has(SecurityContext::AUTHENTICATION_ERROR)) {
-            $error = $this->get('request')->attributes->get(SecurityContext::AUTHENTICATION_ERROR);
+        if ($request->attributes->has(Security::AUTHENTICATION_ERROR)) {
+            $error = $request->attributes->get(Security::AUTHENTICATION_ERROR);
         } else {
-            $error = $this->get('request')->getSession()->get(SecurityContext::AUTHENTICATION_ERROR);
+            $error = $request->getSession()->get(Security::AUTHENTICATION_ERROR);
         }
 
-        return $this->render('MesdSecurityAuthenticationBundle:Security:login.html.twig'
-            ,array(
-                'last_username' => $lastUsername,
-                'error' => $error
-                )
-            );
+        return $this->render('MesdSecurityAuthenticationBundle:Security:login.html.twig', [
+            'last_username' => $lastUsername,
+            'error'         => $error,
+        ]);
     }
 
     /**

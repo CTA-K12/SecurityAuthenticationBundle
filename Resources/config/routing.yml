@@ -1,5 +1,5 @@
 mesd_security_security_homepage:
-    pattern:  /services
+    path:     /services
     defaults: { _controller: MesdSecurityAuthenticationBundle:Default:index }
 
 mesd_security_security_security:
