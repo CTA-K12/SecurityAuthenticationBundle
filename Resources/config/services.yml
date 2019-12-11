@@ -2,4 +2,4 @@
 services:
     security.authentication.provider.universal_auth:
         class:  Mesd\Security\AuthenticationBundle\Security\Authentication\UniversalAuthenticationProvider
-        arguments: [ '@security.user_checker', '', '' ]
+        arguments: [ "@security.user_checker", '', '' ]
